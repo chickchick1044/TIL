@@ -1,0 +1,2 @@
+07.text/data/
+sql/employees/
