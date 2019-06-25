@@ -1,0 +1,70 @@
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+%matplotlib inline
+
+
+data=pd.read_csv('credit_card_data_utf.csv',encoding='utf8')
+
+
+sns.jointplot('monthly_loan','credit_card_payment', data=data)
+
+
+
+data=pd.read_csv('credit_card_data_utf.csv',encoding='utf8')
+
+data_by_sex=data[data.pop_cd.str[0]=='Y']
+
+data_by_loc=data[data.pop_cd.str[0]=='L']
+
+tmp_data_by_sex=data_by_sex[data['credit_card_payment']> 100000]
+
+sns.lmplot('credit_card_installments_payment','monthly_card_spend',data=tmp_data_by_sex, hue='ages') 
+
+sns.lmplot('mortgage_loan','monthly_card_spend',data=tmp_data_by_sex, hue='ages') 
+
+sns.jointplot('credit_loan','monthly_card_spend',data=tmp_data_by_sex)
+
+sns.lmplot('credit_card_installments_payment','monthly_lc',data=tmp_data_by_sex, hue='ages')
+
+sns.lmplot('mortgage_loan','monthly_card_spend',data=data_by_loc_CC, hue='city') 
+
+data_by_loc_10=data_by_loc[data_by_loc['ages']=='10대']
+data_by_loc_20=data_by_loc[data_by_loc['ages']=='20대']
+data_by_loc_30=data_by_loc[data_by_loc['ages']=='30대']
+data_by_loc_40=data_by_loc[data_by_loc['ages']=='40대']
+data_by_loc_50=data_by_loc[data_by_loc['ages']=='50대']
+data_by_loc_60=data_by_loc[data_by_loc['ages']=='60대']
+data_by_loc_70=data_by_loc[data_by_loc['ages']=='70대']
+data_by_loc_80=data_by_loc[data_by_loc['ages']=='80대']
+data_by_loc_90=data_by_loc[data_by_loc['ages']=='90대']
+
+
+x=data.drop('monthly_card_spend', axis=1)
+    
+y=data['monthly_card_spend']
+
+
+from sklearn.model_selection import train_test_split
+
+from sklearn.linear_model import LinearRegression
+
+# 나이대 별 회귀모형
+
+def Linear_model(age_data):
+    
+    x=age_data.drop(['monthly_cd_loan','monthly_card_spend','pop_cd','city','ages','sex','credit_card_payment','credit_card_installments_payment'], axis=1)
+    
+    y=age_data['monthly_card_spend']
+    
+    x_train, x_test, y_train, y_test=train_test_split(x,y, test_size=0.5)
+    
+    lm = LinearRegression()
+    
+    lm.fit(x_train,y_train)
+    
+    preditions= lm.predict(x_test)
+    
+    plt.scatter(y_test,preditions)
