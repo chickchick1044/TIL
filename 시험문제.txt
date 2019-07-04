@@ -1,0 +1,57 @@
+﻿1. scikit-learn 15
+2. azure machine learning 15
+
+수행평가
+1. iris() 
+2. 1장 demo1 -> 화면캡쳐, 결과값
+
+파이썬에서 제공하는 머신러닝 라이브러리
+1. scikit-learn, (tensor flow, keras- 패키지)
+2. 머신러닝의 개념: 인공 지능의 한 분야로 컴퓨터가 학습할 수 있도록 하는 알고리즘과 기술을 개발하는 분야
+3. 머신러닝의 구분 2가지: 지도학습 / 비지도학습
+4. 파이썬에서 과학계산용 라이브러리 : numpy package
+5. 지도학습의 분류 - 회귀 regression / 분류 classification
+6. 비지도학습의 분류 - 클러스터링 clustering / (이상예측 / 차원축소)
+7. 지도학습 알고리즘 - 
+8. 비지도학습 알고리즘 - KMeans 
+9. jupyter notebook
+10. 분류는 미리 정의된 가능성이 있는 여러 개의 class label중 하나를 선택하는 것이다. class labeling
+
+11. 학습모델에서 일반화(generalization)란? 
+지도학습에서는 훈련데이터로 학습한 모델이 훈련데이터와 특성이 같다면 
+처음 보는 새로운 데이터가 주어져도 정확한 예측을 할것이라고 기대합니다. 모델이 처음보는 데이터에 대해 정확하게 예측할 수 있으며
+이를 훈련 세트에서 테스트세트로 일반화 되었다고 한다.
+
+12. feature를 도출하는 과정을 feature engineering
+ 클렌징 -> normalization : 스케일링 -> one-hot encoding -> feature
+
+13. matplotlib ??
+14. 엔트로피기반 알고리즘: decision tree알고리즘
+15. SVM: 최대마진을 구하는 알고리즘, 커널을 사용하는 목적: 차원
+16. KMeans : K개의 클러스터로 묶는 알고리즘, 주로 데이터가 많을 때
+17. 데이터를 처리와 분석을 위한 알고리즘 : pandas
+18. yes/no, 0/1 - classification
+19. 알고리즘의 요소 - set of steps, methods, actions
+20. 
+regression: 예측하기 위함, 데이터가 연속적일때
+머신러닝 처리 절차: obtain raw data -> preprocessing -> prepare the data ->
+apply one or more machine learning algorisim -> 
+
+21. storage account :
+
+22. machine learning: detecting patterns, statistical analysis, creating models
+
+23. hadoop ecosystem - hd insight에 있는 hiv라는모듈을 통해 
+
+24. 구조화된 데이터베이스 :
+html, log - > 비구조화
+
+25. 빅데이터 3V: volume양, velocity 속도, variety 다양성
+
+
+수행평가
+1. p38 47,48,49  붓꽃의 품종분류 -> txt
+2. module 1, demo1
+
+
+
