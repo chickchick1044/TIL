@@ -1,0 +1,49 @@
+﻿SQL
+데이터베이스: 체계화된 데이터의 모임. 
+작성된 목록으로써 여러 응용시스템들의 통합된 정보들을 저장하여 운영할 수 있는 공용 데이터들의 묶음 여러사람이 공유하여 사용할 목적으로 통합, 관리하는 데이터의 집합
+
+* SELECT
+* JOIN
+* ORDER BY
+* GROUP BY
+* CROSS JOIN
+* 단순 연결리스트
+* 리스트
+* 시간복잡도, 공간복잡도
+* 자료구조
+* 스택(LIFO), 큐(FIFO)
+* 순환(재귀함수) Recursion
+* R vs Microsoft Open R -> xdf형식으로 저장
+* msrdeploy package
+* DataFrame (in memory) -> 메모리부족
+* rxImport(xdf형식으로 저장)
+* ScaleR package
+* rxFactor
+* XDF
+
+* list vs tuple(:read only)
+* class Employee
+ a = Employee()
+ * matplotlib : 시각화 라이브러리
+ * boxplot
+ * scatter
+ * hist
+ * plot
+import matplotlib.pyplot as plt
+
+plt.boxplot(x,y)
+
+plt.scatter( x , y )
+
+plt.hist(x, bins=15)
+
+plt.plot(x,y)
+
+
+a = [2,3,4,['a', 'b']]
+a[-1] ----> 출력: ['a', 'b']
+
+a = [(1,2), (2,2), (3,4)]
+for(first, last) in a:
+    print(first + last)
+출력: 3 4 7
