@@ -1,0 +1,17 @@
+1차원 실수 분포 플롯: rugplot, kdeplot, distplot
+# rugplot: 데이터 위치를 x축 위에 작은 선분(rug)로 나타내어 실제 데이터들의 위치를 보여준다.
+# kde: 커널밀도, 히스토그램보다 부드러운 형태의 분포 곡선을 보여주는 방법
+# distplot: 러그와 커널밀도 표시 기능이 있다.
+    sns.distplot(x, kde=True, rug=True)
+
+2차원 실수 분포 플롯: jointplot (스캐터 플롯)
+
+분포플롯: regplot, residplot, lmplot, stripplot, swarmplot, 
+# regplot: 산점도
+# residplot: 잔차항을 스캐터플롯으로 그린다. (잔차: 회귀분석에서 예측값과 실제값의 차이)
+
+바플롯: barplot, countplot, boxplot, pointplot, violinplot, 
+# barplot에서 막대의 높이는 평균, 에러바는 편차를 나타낸다.
+# countplot: 각 카테고리 값 별로 데이터가 얼마나 있는지 표시
+
+heatmap

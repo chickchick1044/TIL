@@ -1,0 +1,188 @@
+1.sum=0
+for i in range(1,11):
+    sum += i
+print(sum)
+
+2.sum=0
+i=0
+while i<=10:
+    sum += i
+    i += 1
+print(sum)
+
+3.vowel=['a', 'e', 'i', 'o', 'u']
+ls = []
+for i in letter:
+    if i in vowel:
+        ls.append(i)
+print(ls)
+
+4.
+ x for x in range(1,5)
+
+5.
+(i,j) for i in range(1,4) for j in range(6,8)
+
+6.
+(i, j) for i in x for j in y
+
+7.
+(word.upper(), word.lower(), len(word)) for word in phrase.split()
+
+8.
+x for x in range(10) if x%2==0
+
+9.
+    if i<5:
+        continue
+    elif i>7:
+        break
+    else:
+        ls.append(i)
+
+10.
+total=0
+cnt = 0
+for i in range(5):
+    score = int(input("점수를 입력하세요: "))
+    total += score
+
+avg = total/5
+print("Class average is ", avg)
+
+11.
+cnt = 0
+while cnt<5:
+    score = int(input("점수를 입력하세요: "))
+    total += score
+    cnt += 1
+avg = total/5
+print("Class average is ", avg)
+
+12.
+sum = 0
+for i in range(1,11):
+    sum += i
+print('sum: ', sum)
+
+13.
+sum = 0
+i = 1
+while i<=10:
+    sum += i
+    i += 1
+print('sum: ', sum)
+
+14.
+#숫자를 입력받아 그 숫자의 팩토리얼을 출력
+num = int(input())
+result = 1
+for i in range(2,num+1):
+    result *= i
+
+print(str(num) + "! is "+ str(result))
+
+15.
+num = int(input("Enter number: "))
+i=num
+result=1
+while i>0:
+    result *= i
+    i -= 1
+print(str(num) + "! is "+ str(result))
+
+16.
+    if i%2==0:
+        continue
+    print(i)
+
+17.
+n = int(input('-->'))
+oddsum = 0
+evensum = 0
+
+for i in range(1,n+1):
+    if (i%2==0):
+        evensum += i
+    else:
+        oddsum += i
+print('n=%d: oddSum=%d, evenSum=%d' % (n, oddsum, evensum))
+
+18.
+L = [70, 100, 80, 60, 90]
+nMin=nMax=L[0]
+for i in L:
+    if nMin>i:
+        nMin = i
+    elif nMax<i:
+        nMax = i
+
+print("Min=%d, Max=%d" % (nMin, nMax))
+
+19.
+for i in range(1,10):
+    for j in range(1,10):
+        print('{}x{}={:>2}'.format(j, i, j*i), end=', ')
+    print()
+
+20.
+n = int(input('양의 정수--> '))
+prime = True
+for i in range(2,n):
+    if n%i==0:
+        print('소수가 아닙니다')
+        prime=False
+        break
+if prime==True:
+    print('소수 입니다')
+
+21.
+# *
+# **
+# ***
+# ****
+# *****
+# ******
+# *******
+# ********
+# *********
+for i in range(10):
+    print('*'*i)
+
+
+22.
+# **********
+# *********
+# ********
+# *******
+# ******
+# *****
+# ****
+# ***
+# **
+# *
+for i in range(10):
+    print('*'*(10-i))
+
+23.
+#  **********
+#  *********
+#   ********
+#    *******
+#     ******
+#      *****
+#       ****
+#        ***
+#         **
+#          *
+for i in range(10):
+    print(' '*i, '*'*(10-i))
+
+24.
+#     *     
+#    ***    
+#   *****   
+#  *******  
+# ********* 
+for i in range(1,10,2):
+    print(' '*(), '*'*(i))

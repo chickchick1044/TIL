@@ -1,0 +1,18 @@
+1.
+data = f.read()
+print(data)
+
+2.
+for line in f:
+	print(line)
+
+3.readlines() - 파일 전체를 리스트로 반환한다.
+data = f.readlines()
+for line in data:
+	print(line)
+
+4.
+line = f.readline()
+while line:
+	print(line)
+	line = f.readline()

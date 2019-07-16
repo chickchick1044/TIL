@@ -1,0 +1,25 @@
+>matplotlib
+figure() 호출하지 않아도 plot하면 기본으로 figure(도화지)를 생성한다.
+
+plt.plot(x1,y1,c="b", ls="dotted"): ls는 linestyle
+
+plot은 선그래프
+scatter 는 분포그래프
+bar
+histogram
+boxplot
+
+plt.scatter(x,y, s=area, c=colors, alpha=0.5):  s는 사이즈, alpha=투명도
+
+tick: 축값의 이름
+
+randim.randn(1000): 1000안에서 랜덤값
+
+
+text: 지정한 위치에 텍스트
+annotate: 화살표하고 설명을 적어줌
+ 
+barh: 수평으로 바차트가 만들어짐
+
+
+

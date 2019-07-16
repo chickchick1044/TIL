@@ -1,0 +1,98 @@
+21. What will happen if a private IP address is assigned to a public interface connected to an ISP?
+A. Addresses in a private range will be not routed on the Internet backbone
+:사설 IP가 할당되면 인터넷 접속이 불가하다. 사설 IP를 사용하면서 인터넷을 사용하려면 
+NAT(Network address translation)를 사용해야한다.
+
+22. Refer to the exhibit. The Bigtime router is unable to authenticate to the Lifetime router.
+What is the cause of the problem?
+B. The passwords do not match on the two routers
+: PPP인증이 성공하기 위해서 양쪽에서 사용하는 패스워드가 동일해야 한다.
+PPP(the Point-to-Point Protocol)이란 서로 다른 업체의 원격 액세스 소프트웨어들이 직렬로 서로 연결하여
+TCP/IP프로토콜로 통신할 수 있도록 만들기 위해 제정된 표준 규약
+
+23. What will be the result if the following configuration commands are implemented on a Cisco switch?
+switch(config-if)#switchport port-security
+switch(config-if)#switchport-security mac-address sticky
+B. A dynamically learned MAC address is saved in the running-configuration file.
+:
+
+24. Refer to the exhibit. The following commands are executed on interface fa0/1 of 2950Switch.
+B. Only host A will be discarded when it is received by 2950 Switch
+D. All frames arriving on 2950 Switch with a destination of 0000.00aa.aaaa
+will be forwarded out fa0/1
+
+25. Which command can you enter to re-enable Cisco Discovery Protocol on a local router 
+after it has been disabled?
+C. Router(config)#cdp run
+
+26. A Cisco router is booting and has just completed the POST process.
+It is now ready to find and load an IOS image.
+What function does the router perform next?
+A. It checks the configuration register
+
+27. What are three advantages of VLANs?
+A. They establish broadcast domains in switched networks
+E. They allow access to network services 
+F. They can simplify adding, moving, or changing hosts on the network
+
+28. Refer to the exhibit. The output that is shown is generated at a switch.
+Which three of these statements are true?
+A. All ports will be in a state of discarding, learning, or forwarding
+C. The bridge priority is lower than the default value for spanning tree.
+E. All designated ports are in a forwarding state
+
+29. Which two commands can be used to verify a trunk link configuration status on a given
+cisco switch?
+B. show interfaces trunk
+C. show interfaces switchport
+
+30. Which two states are the port states when RSTP has converged?
+C. discarding
+D. forwarding
+
+31.Refer to the exhibit. A technician has installed SwitchB and 
+needs to configure it for remote access from the management workstation connected Switch A.
+Which set of commands is required to accomplish this task?
+B. 
+Switch B (config)#ip default-gateway 192.168.8.254
+Switch B (config)#interface vlan1
+Switch B (config)#ip address 192/168.252 255.255.255.0
+Switch B (config)#no shutdown
+
+32. Which of the follwing are benefits of VLANs?
+B. They allow logical grouping of users by function
+C. They can enhance network security
+E. They increase the number of broadcast
+: VLAN의 장점은 트래픽을 줄이고, 여러 워크그룹과 리소스를 분리하고, 허용된 사용자만 접속하도록 제한하여 네트워크의 보안을 강화한다는 점
+
+33. What are three benefits of implementing VLANS?
+C. A higher level of network security can be reached by separating sensitive data traffic from other network traffic
+E. A more efficient use of bandwidth can be achieved allowing many logical networks to use the same network infrastructure
+F. Broadcast storms can be mitigated by increasing the number of broadcast domains,
+ thus reducing their size
+
+34. Which three statements accurately descibe layer2 Ethernet switches?
+A. Microsegmentation decreases the number of collisions on the network
+D. In a properly functioning network with redundant switched paths,
+each switched agrement will contain one root bridge with all its ports in the forwarding state.
+All other switches in that broadcast domain will have only one root port.
+E.Switches that are configured with vlans make forwarding decisions based on both layer2 and layer2 address information
+: 
+-네트워크안에서의 충돌이 줄어든다.
+-정상작동하는 중복된 스위치가 있는 경로에서 
+해당 브로드캐스트 도메인의 다른 모든 스위치는 하나의 루트 포트만을 갖는다.
+-VLAN으로 구성된 스위치는 2계층과 3계층 주소를 기반으로 forwarding을 한다.
+
+35. Which two correctly describe steps in the OSI data encapsulation process?
+A. The transport layer divides a data stream into segments and may add reliability and flow control information
+D. Packets are created when the network layer adds Layer3 addresses and control information to a segment
+: 전송은 데이터흐름을 segment로 나누고, 안정성과 흐름제어를 더한다.
+패킷은 네트워크계층에 3계층 주소와 세그먼트 제어정보를 더할때 만들어진다.
+
+36. Which of the following describes the roles of devices in a WAN?
+A. A CSU/DSU terminates a digital local loop
+D. A modem terminates an analog local loop
+E. A router is commonly considered a DTE device
+: -CSU/DSU(Channel Service Unit/Digital Service Unit) 
+
+

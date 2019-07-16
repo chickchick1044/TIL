@@ -1,0 +1,17 @@
+#키워드 변수는 딕셔너리형태로 처리한다
+#**kw 매개변수를 받은 후 kw값 올림차순으로 정렬해서 리턴하는 함수
+#foo3()
+def foo3(**kw):
+	return sorted(kw.items(), key=lambda x:x[1])
+
+
+#가변인수와 키워드인수를 매개변수로하여
+#각각의 합을 출력하는 함수 varSum()
+def varSum(*args, **kw):
+	arg_sum = sum(args)
+	kw_sum = sum(kw.values())
+	return arg_sum,kw_sum
+
+L=['red', 'yellow', 'blue']
+for i in enumerate(L):
+	print(i)

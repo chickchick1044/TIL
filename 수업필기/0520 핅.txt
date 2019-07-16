@@ -1,0 +1,5 @@
+astype() : 형 변환
+
+판다스에서 컬럼값을 입력할때는
+df.firstname (x)
+df["firstname"] (0)

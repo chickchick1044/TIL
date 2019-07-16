@@ -1,0 +1,7 @@
+R, R studio 설치
+
+R studio에서 R scripts 저장시 UTF-8
+주석: #
+대소문자 구분ㅇ
+
+교재: "시작하세요 R 데이터"

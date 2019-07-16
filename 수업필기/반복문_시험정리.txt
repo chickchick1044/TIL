@@ -1,0 +1,154 @@
+﻿반복문
+
+1.
+sum=0
+i=1
+while i<=10:
+    sum += i
+    i+=1
+print(sum)
+
+5. 
+letter = 'computational thinking'
+vowel = ['a','e','i','o','u']
+ls = []
+cnt = 0
+for i in letter:
+    if i in vowel:
+        ls.append(i)
+        cnt += 1
+print(cnt)
+print(ls)
+
+6.
+M1 = [x for x in range(1,5)]
+print(M1)
+
+7.
+M2 = [(i,j) for i in range(1,4) for j in range(6,8)]
+print(M2)
+
+8.
+x = [0,1,2,3,4]
+y = [5,6,7,8,9,10]
+ls = [(i,j) for i in x for j in y ]
+print(ls)
+
+9.
+phrase = 'Be as proud of Sogang as Sogang is proud of you'
+ls = [ (word.upper(), word.lower(), len(word) ) for word in phrase.split() ]
+print(ls)
+
+10.
+[x for x in range(10) if x%2==0]
+
+11.
+ls = []
+for i in range(1,11):
+    if i<5:
+        continue;
+    elif i>7:
+        break;
+    else:
+        ls.append(i)
+print(ls)
+
+12.
+score = []
+total = 0
+count = 0
+while count<5:
+    score = int(input("점수를 입력하세요: "))
+    total += score
+    count += 1
+
+avg = total/count
+print("Class average is ", avg)
+
+13.
+a = 1
+sum = 0
+while a <= 10:
+    sum += a
+    a += 1
+print('sum: ', sum)
+
+14.
+num = int(input("Enter number: "))
+i=num
+result=1
+while i>0:
+    result *= i
+    i -= 1
+print(str(num) + "! is "+ str(result))
+
+15.
+num = int(input("Enter number: "))
+i=num
+result=1
+for i in range(1,num+1):
+    result *= i
+print(str(num) + "! is "+ str(result))
+
+16.
+scope = [1,2,3,4,5]
+for i in scope:
+    if i % 2 ==0:
+        continue
+    print(i)
+
+17.
+n = int(input('-->'))
+oddsum=0
+evensum=0
+for i in range(n+1):
+    if i%2==0:
+        evensum += i
+    else:
+        oddsum += i
+print('n=%d: oddSum=%d, evenSum=%d' % (n, oddsum, evensum))
+
+18.
+L = [70, 100, 80, 60, 90]
+nMin = nMax = L[0]
+
+for i in L:
+    if i < nMin:
+        nMin = i
+    elif nMax < i:
+        nMax = i
+
+print("Min=%d, Max=%d" % (nMin, nMax))
+
+19.
+for i in range(1,10):
+    for j in range(1,10):
+        print('{}x{}={:>2}'.format(j, i, j*i), end=', ')
+    print()
+
+20.
+n = int(input('양의 정수--> '))
+prime = True
+for i in range(2,n):
+    if n%i==0:
+        prime = False
+        print('소수가 아닙니다')
+        break
+if prime==True:
+    print('소수 입니다')
+
+21.
+for i in range(10):
+    print('*'*i)
+
+22.
+for i in range(10):
+    print('*'*(10-i))
+
+23.
+for i in range(10):
+    print(' '*(i-1),'*'*(10-i))
+
+24.
+for i in range(1,10,2):
+    print('{:^10}'.format('*'*i))

@@ -1,0 +1,5 @@
+﻿ds = ws.datasets['IMDB Movie Titles.csv']
+frame = ds.read_as_text()
+#frame.replace('\r\n')
+frame.replace('\x94','').splitlines()
+

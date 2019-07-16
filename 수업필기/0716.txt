@@ -1,0 +1,85 @@
+﻿
+conda env list -> 가상환경 리스트로 출력
+
+conda create -n deeplearning --yes : --name을 줄여서 -n으로도 가능, vm이름이 deeplearning
+
+conda create -n deeplearning numpy pandas matplotlib --yes: 가상환경을 만들면서 라이브러리를 같이 설치함
+
+conda activate deeplearning : 가상환경 접속
+
+conda.bat deactivate : 가상환경을 벗어남
+
+
+conda install pandas --yes : 가상환경 접속해서 라이브러리 설치
+conda update pandas --yes : 가상환경 접속해서 라이브러리 업데이트
+conda update -n base conda-build --yes : 판다스 업데이트하기전에 conda-build를 업데이트한다.
+
+conda insall -n deeplearning pkg : 해당가상환경에 원하는 패키지를 설치한다.
+
+conda activate deeplearning : 으로 가상환경에 접속하고
+pip install tensorflow : 가상환경 안에서 pip를 통해 텐서플로우를 설치한다.
+
+  ipython : 가상환경에서 ipython을 실행시킨다.
+    import tensorflow as tf
+    print(tf.__version__) : 텐서플로우가 import되었는지 확인하기 위해 버전을 확인
+    exit() : ipython 환경을 나간다.
+
+pip install keras : 가상환경안에서 pip를통해 keras를 설치한다.
+
+
+conda activate deeplearning : 가상환경안에 접속한다.
+jupyter notebook --no-browser : 가상환경안에서 주피터노트북을 실행시킨다.(브라우저를 띄우지않음)
+
+> 주피터 노트북
+a: 셀 삽입
+d: 셀 삭제
+cv: 복붙
+%load '파일명' : 파일 불러오기
+
+> 01. my_first_
+MSE: 제곱근에 대한 오차
+
+loss: 
+optimizer: 
+activation: 
+
+히스토그램: 연속형 데이터에 대한 구간의 값
+  cf ) 돈과 관련된 데이터(희소성)는 정규분포를 따르지 않는다.
+
+통계: 
+- 확률: 
+- 분포: 수학자들이 자신이 옳다는것을 증명하기위해 비교의 분포가 필요했음
+대립가설(내가 증명하고 싶은 것)을 증명하기 위해 귀납가설(내가 증명하는것의 반대)이 기각됨을 증명한다.
+
+1.정규분포
+2.카이제곱분포
+3.T분포
+4.포아송분포
+5.균등분포
+각 분포가 사용되는 목적이 다르다.
+
+모집단의 크기가 클때는 정규분포를 따를 확률이 높지만
+모집단의 크기가 작을때는 정규분포를 따르지 않을수도있다.
+또는 희소성을 가지는 데이터는 정규분포를 따르지않는다.
+
+로그화(log1p) : 정규분포를 따르도록 변환
+
+수집 -> 전처리 -> 분석
+전처리 - 결측값 처리 : 제거/대체:대표값(평균값,중앙값,최빈값, 최근에는 KNN모델을 활용)
+         - 이상치 : OUTLIER < Q1 -1.5*IQR (LOW BOUND) , Q3 + 1.5*IQR < OUTLIER을 통해 검출하여, 정상치의 평균 또는 최대값으로 대체
+
+python - unpack operator
+LR, Ridge, Lasso : 규제(L1, L2 노름)가 적용된 선형 모델. 
+패널티: 계수의 변동을 적어지게함
+다중 공선성: 
+    y ~ x1+x2+x3.. x는 각각 독립변수, y는 x에 대한 종속
+    이때 독립변수는 실제로 서로 독립적이지 않기때문에 이중에서 더 영향을 많이 미치는 것만 남겨두고 지운다.
+elastic : Ridge와 Lasso를 몇퍼센트씩 섞어서 쓸거냐  
+
+선형모델은 표준화를 해주지않으면 왜곡이 많다.
+
+
+
+
+
+

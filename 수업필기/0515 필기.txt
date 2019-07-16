@@ -1,0 +1,229 @@
+1.
+f= open('poem.txt','w')
+f.write(text)
+f.close()
+
+2.
+f = open('poem.txt','r')
+for line in f:
+    print(line)
+
+3.
+f = open('poem1.txt','w')
+f.write(text)
+f.close()
+
+4.
+f = open('poem1.txt','r')
+a = f.read(10)
+print(a)
+
+5.
+f = open('poem1.txt','r')
+a = f.readline()
+print(a)
+f.close()
+
+6.
+f = open('poem1.txt','r')
+for line in f:
+    print(line)
+f.close()
+
+7.
+f = open('poem.txt','r')
+data = f.read()
+print(data)
+
+8.
+f = open('poem.txt','r')
+for line in f:
+    print(line)
+f.close()
+
+9.
+f = open('poem.txt','r')
+data = f.readlines()
+for line in data:
+    print(line)
+
+10.
+f = open('poem.txt','r')
+while line:
+    print(line)
+    line = f.readline()
+
+11.
+f = open('poem.txt','r')
+data = f.readlines()
+for line in data:
+    print(line)
+
+12.
+D = dict()
+f = open('ban.txt','r')
+for line in f:
+    D[line.split()[0]] = line.split()[1]
+print(D)
+
+13.
+D = dict()
+f = open('ban.txt','r')
+for line in f:
+    (key, val) = line.split()
+    D[key] = val
+print(D)
+
+14.
+D = dict()
+f = open('ban_student.txt','r')
+
+for line in f:
+    key = line.split()[0]
+    val = line.split()[1:]
+    D[key]= val
+print(D)
+
+15.
+#stockcod.txt 를 read()로 읽어서 출력
+f = open('stockcode.txt', 'r')
+a = f.read()
+print(a)
+
+16.
+#stockcode.txt에서 '삼성전자'의 거래소 번호를 출력하세요
+f=open('stockcode.txt','r')
+for line in f:
+    if line.split()[1]=='삼성전자':
+        print(line.split()[0])
+
+17.
+def writtings():
+    txt = input('텍스트를 입력하세요: ')
+    f = open('mytxt.txt', 'w')
+    f.write(txt)
+    f.close()
+writtings()
+
+18.
+while True:
+    txt = input('텍스트를 입력하세요: ')
+    f = open('mytxt.txt', 'a')    
+    f.write(txt)
+    
+    if txt=='':
+        break
+f.close()
+
+
+19.
+f= open('stockcode.txt','r')
+data = f.read()
+g=open('stockcode1.txt','w')
+g.write(data)
+f.close()
+g.close()
+
+20.
+f=open('img.jpg','rb')
+data = f.read()
+g=open('img2.jpg', 'wb')
+g.write(data)
+f.close()
+g.close()
+
+21.
+buf_size = 100
+f=open('img.jpg','rb')
+data = f.read(buf_size)
+f = open('img.jpg', 'rb')
+g = open('img2.jpg', 'wb')
+
+while data:
+    data = f.read(buf_size)
+    g.write(data)
+f.close()
+g.close()
+
+22.
+spos = 105
+size = 100
+
+f=open('stockcode.txt','r')
+g=open('stockcode3.txt', 'w')
+
+f.seek(spos) #spos에서부터 파일을 읽는다
+data = f.read(size)
+g.write(data)
+
+p = open('stockcode3.txt', 'r')
+data = p.read()
+print(data)
+
+23.
+#정수를 입력받고 천자리에 ','를 표시
+num = input('숫자를 입력하세요: ')
+num = num[::-1]
+ret = ''
+for i, c in enumerate(num):
+    i = i+1
+    if i != len(num) and i%3==0:
+        ret += (c+',')
+    else:
+        ret += c
+ret = ret[::-1]
+print(ret)
+
+24.
+def getTextFreq(filename):
+    f = open(filename,'r')
+    data = f.read()
+    ret = {}
+    for c in data:
+        if c in ret:
+            ret[c] += 1
+        else:
+            ret[c] = 1
+    return ret
+    f.close()
+    
+ret = getTextFreq('mydata.txt')
+print(ret)
+
+25.
+#mydata에서 입력받은 문자를 다른 문자로 바꾸어 mydata2로 저장
+
+t1 = input('찾을 영문자를 입력하세요: ')
+t2 = input('변경할 영문자를 입력하세요: ')
+
+f = open('mydata.txt','r')
+g = open('mydata2.txt','w')
+data = f.read()
+data = data.replace(t1,t2)
+g.write(data)
+#내가 푼 코드
+# for c in data:
+#     if c==t1:
+#         g.write(t2)
+#     else:
+#         g.write(c)
+f.close()
+g.close()
+print('[%s]를 [%s]로 변경하였습니다.'%(t1,t2))
+
+26.
+#파일에서 단어의 갯수를 출력하는 함수를 만드세요
+
+def countWord(filename, word):
+    f = open(filename,'r')
+    data = f.read()
+    p = data.find(word)
+    p = int(p)
+    count = 0
+    while p != -1:
+        count += 1
+        p = data.find(word, p+1)
+    return count
+    
+ret = countWord('mydata.txt', 'a')
+print('[%s]의 개수: %d' %('a',ret))

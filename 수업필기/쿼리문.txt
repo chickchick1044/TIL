@@ -1,0 +1,15 @@
+CREATE SCHEMA `shopdb` ;
+
+CREATE TABLE `shopdb`.`membertbl` (
+  `memberid` CHAR(8) NOT NULL,
+  `membername` CHAR(5) NOT NULL,
+  `memberaddress` CHAR(20) NULL,
+  PRIMARY KEY (`memberid`));
+
+CREATE TABLE `shopdb`.`producttbl` (
+  `productname` CHAR(4) NOT NULL,
+  `cost` INT NULL,
+  `company` CHAR(5) NULL,
+  `makedate` DATE NOT NULL,
+  `amount` INT NULL,
+  PRIMARY KEY (`productname`));

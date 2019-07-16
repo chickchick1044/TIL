@@ -1,0 +1,61 @@
+1.
+x = [0,1,2,3,4]
+y = [5,6,7,8,9,10]
+# 둘을 합하여 튜플로 출력
+
+ls = [(i, j) for i in x for j in y]
+print(ls)
+
+
+2.
+phrase = 'Be as proud of Sogang as Sogang is proud of you'
+#출력값이 
+#[('BE', 'be', 2), ('AS', 'as', 2), ('PROUD', 'proud', 5), ('OF', 'of', 2), ('SOGANG', 'sogang', 6), ('AS', 'as', 2), ('SOGANG', 'sogang', 6), ('IS', 'is', 2), ('PROUD', 'proud', 5), ('OF', 'of', 2), ('YOU', 'you', 3)]
+
+ls = [(word.upper(), word.lower(), len(word)) for word in phrase.split()]
+print(ls)
+
+3.
+# 0부터 10까지 짝수
+# for i in range(0,11):
+#     if i%2==0:
+#         print(i, end=' ')
+
+[x for x in range(10) if x%2==0]
+
+4.# 5부터 7까지의 수를 리스트로 출력
+ls=[]
+for i in range(1,11):
+    if i<5:
+        continue
+    elif i>7:
+        break
+    else:
+        ls.append(i)
+print(ls)
+
+5.
+num = int(input("Enter number: "))
+i=num
+result=1
+while i>0:
+    result *= i
+    i -= 1
+print(str(num) + "! is "+ str(result))
+
+6.#1부터 5까지 홀수를 각줄마다 출력
+scope = [1,2,3,4,5]
+for i in scope:
+    if i%2==0:
+        continue
+    print(i)
+
+7. 구구단
+for i in range(1,10):
+    for j in range(1,10):
+        print('{}x{}={:>2}'.format(j, i, j*i), end=', ')
+    print()
+
+8.
+for i in range(1,10,2):
+    print('{:^10}'.format('*'*i))

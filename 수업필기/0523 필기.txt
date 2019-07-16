@@ -1,0 +1,44 @@
+<판다스 플롯>
+판다스에서는 kind='bar'로 주면 바차트로 그릴수있다.
+
+to_datetime: str에서 날짜타입(datetime)으로 바꾸어줌
+dt.year : str에서 year로 바꿈
+
+<타이타닉>
+factorplot: 개수를 막대그래프로
+
+col = day: 칼럼을 요일로 나눠라
+col_wrap=2 : 2개씩만 그려라
+
+hue: 한그래프안에서 구분해서 vs col: 분리해서 그림
+
+factorplot: x와 y가 같이있으니까 변화하는것을 그림
+
+jointplot: 두 데이터의 상관관계
+
+order: 순서
+hue order: hue에 대한 오더
+axies order hue
+
+<전처리>
+<카테고리 데이터: 수치를 바꾼다.>
+get_dummies : one hot encode(자기가 해당하는것만 1인 표로 바꿔줌)
+cut: 구간을 만들어줌
+(숫자보다 설명을 넣는것이 이해가 쉬울때, 구간에 해당하는 데이터를 원하는값으로 바꿈)
+
+sklearn에서 라벨링 형식으로 바꾸는 방식
+labelEncoding: 라벨 번호를 붙여줌
+le.fit: 데이터를 학습하라(구조를 파악해라) -> 라벨인코딩 함수의 객체에 저장
+transform()을 사용하여 실제로 변환
+
+원본데이터는 같은데, 학습내용이 달라지니까(구조가 다르기 때문에) 각각을 리스트에 넣는다.
+한번에 트랜스폼하지않고 핏을 먼저한다.
+
+리스트에 저장해놓으면, 나중에 또 사용할 때 다시 학습시킬필요가 없다.
+
+<data normalization>
+standardized(normalization): 평균이0 표준편차가1
+min-max: 0과 1사이의 값으로 스케일이 같도록 만든다.
+normalization하기 위해 min-max(scaling)를 한다??
+
+

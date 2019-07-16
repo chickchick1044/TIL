@@ -1,0 +1,40 @@
+<시각화01. 심화>
+시험은 matplotlib, seanborn
+
+linespace(): 0부터 5까지를 10으로 균등하게 나눠라
+
+cumsum(): 누적합 -> 배열로 저장
+
+subplot(211): figure를 4로 나눠서 2행1열1번째에 그림을 그린다.
+
+add_axes(): 그림속에 축을 추가
+
+datetime.datetime.today(): 현재 시간
+
+sharex: x축을 공유하겠다.
+
+
+<분포플롯>
+러그데이터 위치를 x축 위에 작은 선분으로 나타내어 실제 데이터 분포를 보여준다.
+
+residplot은 잔차항을 스캐터 플롯으로 그린다.
+잔차: 회귀분석에서 예측값과 실제값의 차
+
+
+
+<missing value>
+dropna: nan값 삭제, default = 원본 유지
+how="all"을 하면. 전부다 nan인 값만 삭제한다.
+thresh=1: 데이터가 하나만 있어도 삭제하지마라
+thresh=5: 데이터가 5개 이상 있는것만 남겨라
+
+fillna : nan을 주어진값으로 대체
+
+mode(): 최빈값
+
+ df["preTestScore"].fillna(df["preTestScore"].mean(), inplace=True
+: nan을 평균값으로 바꿔라
+
+ df.groupby("sex")["postTestScore"].transform("mean")
+
+

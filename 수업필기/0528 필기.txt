@@ -1,0 +1,5 @@
+앙상블: 모델 여러개를 사용해서 예측하는 알고리즘
+desicion tree: 가장 기본적으로 돌려보는 모델
+
+conda install pydot
+conda install graphviz

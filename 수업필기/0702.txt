@@ -1,0 +1,28 @@
+﻿
+id: admin2019
+pwd: Pa$$w0rd2019
+
+서버관리자: admin0139
+데이터베이스명: AirlineData
+서버명: testmldb0139
+ 
+-HD Insight
+jhhdinsight
+
+admin
+Pa$$w0rd2019
+storageaccount: jhinsight
+
+jhhdinsight-2019-07-02t04-33-23-939z
+
+<Azure studio>
+portal 에서 Azure storage account 만들때 
+고급 > 보안> 보안전송 필요 "사용안함"
+
+JSon으로 request오면 > javascript로 받을수있음
+
+
+jhserver0139
+admin2019
+Pa$$w0rd2019
+

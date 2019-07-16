@@ -1,0 +1,19 @@
+﻿임정환 강사님
+im.jeonghwan@gmail.com
+-자연어처리 
+편미분, 선형대수! 벡터
+인공지능/ 프로그래머를 위한 수학
+
+ML
+Logistic Regression - odds rate: 로그 승산비, 
+y= ax+b에서 x를 coefficient, b를 intercept
+관측값y, 예측값을 y^ . (y-y^)2: 잔차 제곱의 합
+SSR:Sum of Square. RSS: 
+MSE가 성능의 지표! 
+
+
+
+> 하반기 공기업 취업
+1. 자소서 - 토익, 
+2. NCS
+3. 면접

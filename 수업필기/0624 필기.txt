@@ -1,0 +1,32 @@
+﻿이정구 강사님
+thomas194511@gmail.com
+010-4741-1800
+7/17 까지
+
+<R을 데스크탑이 아닌 서버에서 실행>
+https://github.com/MicrosoftLearning/20773_Analyzing-Big-Data-with-Microsoft-R/blob/master/Instructions/20773A_DEMOS_01.md
+
+1. 20773A 폴더에 .exe프로그램 전부 다 실행
+
+2. Hyper-V > 가상 스위치 관리자 >
+  개인 가상 스위치 > 연결형식: 개인 네트워크
+
+3. Hyper-V > 가상 컴퓨터 가져오기 > 
+   C:\Program Files\Microsoft Learning\20773\Drives
+   밑에있는 폴더 4가지 각각 가져오기
+DC 메모리: RAM 512
+DEV: 4096
+RSVR: 2048
+SQL: 2048
+
+4. 가상컴퓨터 DC, DEV, RSVR 실행 시키기
+
+5. 가상컴퓨터 DEV 접속해서 visual studio 실행
+
+6. 설정> 이더넷> 어뎁터옵션>
+이더넷> 이더넷 속성> 공유> 인터넷 연결 공유 둘다 체크, 홈네트워킹연결: vEthernet(Private Network)
+vEthernet(Private Network) > IP 주소: 172.16.0.1, 서브넷:255.255.255.0
+
+6. 가상컴퓨터 DEV 접속해서 R-Studio 다운로드 후 실행
+
+7. DEV에서 E:\Labfiles\Lab01 soultion파일 R스튜디오로 실행

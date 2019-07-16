@@ -1,0 +1,17 @@
+# your code goes here
+
+x = int(input())
+cnt = 0
+
+for i in range(len(x)):
+	if a>=100:
+		first = x//10
+		second = first//10
+		third = second//10
+	elif a>=10:
+		first = 10
+		second = x//10
+		third = second//10
+		
+	if (abs(first-second)==1 || abs(second-third)==1):
+		cnt += 1

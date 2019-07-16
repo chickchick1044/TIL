@@ -1,0 +1,53 @@
+﻿from sklearn.datasets import make_blobs
+x, y = make_blobs(n_samples=150, 
+                 n_features=2,
+                 centers=3,
+                 cluster_std=0.5, 
+                 shuffle=True,
+                 random_state=0)
+
+from sklearn.cluster import KMeans
+km = KMeans(n_clusters=3, 
+           init='random', 
+           max_iter=300, 
+           random_state=0)
+y_km = km.fit_predict(x)
+
+km.cluster_centers_ :중심값
+km.inertia_ : 군집안에있는 데이터들간 거리의 합(낮을수록 군집화가 잘됨)
+
+
+
+from sklearn.cluster import AgglomerativeClustering
+agg = AgglomerativeClustering(n_clusters=3)
+assignment = agg.fit_predict(x)
+print(assignment[:20])
+
+from sklearn.cluster import DBSCAN
+db = DBSCAN(eps=0.2, min_samples=5, metric='euclidean')
+y_db= db.fit_predict(x)
+
+
+distortions = []
+for i in range(1,11):
+    km = KMeans(n_clusters=i,
+               init='random',
+               random_state=0)
+    km.fit(x)
+    distortions.append(km.inertia_)
+
+# <문제> 최적의 클러스터링 갯수를 sihouette 기반으로 확인하시오
+sihouette_list=[]
+for i in range(2,11):
+    km = KMeans(n_clusters=i,
+               init='k-means++',
+               n_init=10,
+                max_iter=300,
+                tol=1e-04,
+                random_state=0 )
+    y_km = km.fit_predict(x)
+    
+    sihouette_vals = sihouette_samples(x, y_km, metric='euclidean')
+    sihouette_avg = np.mean(sihouette_vals)
+    sihouette_list.append(sihouette_avg)
+

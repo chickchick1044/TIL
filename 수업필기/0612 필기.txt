@@ -1,0 +1,93 @@
+<SQL>
+데이터베이스는 대소문자 구분x
+
+select 칼럼명 from 테이블명 where 조건
+use DB명;  ---> DB활성화
+
+(번개: 전체 실행) 혹은 컨트롤+시프트+엔터
+(번개 I(커서): 커서가 있는 부분만 실행) 혹은 컨트롤+엔터
+
+
+
+use shopdb;        : DB활성화
+select membername, memberaddress from membertbl;
+select * from membertbl where membername='지은이';
+
+show databases;  : 목록전체를 보여주는 쿼리
+select * from membertbl;
+
+create table testtbl(
+id int
+);
+show tables;
+
+create table testtbl(
+id int,
+address char       : char 디폴트값, 근데 이미 테이블을 만들어서 UPDATE TABLE로 수정해야함
+);
+
+insert into testtbl values(1);      : 원래는 순서대로 값을 입력해야하는데, 여기서는 칼럼이 하나이므로
+select * from testtbl;
+
+-- 짧은 주석 --
+/*
+블럭 주석
+*/
+
+
+use employees;
+select * from shopdb.membertbl;   -> 직원테이블을 사용하고있지만 shopdb에있는 테이블을 검색
+
+use employees;
+show tables;
+show table status;    -> 테이블에대한 정보를 자세히 볼수있음
+describe employees;  -> 특정 테이블(테이블명:employees)에 대한 정보를 자세히 
+
+
+select first_name as 이름, gender as 성별 from employees;
+select first_name 이름, gender 성별 from employees;   -> 칼럼 이름 바꾸기, as는 생략 가능
+
+
+drop database if exists sqldb;
+create database sqldb;
+show databases;
+use sqldb;
+
+create table usertbl (
+	userid char(8) NOT NULL PRIMARY KEY, -> PRIMARY KEY: 중복x, null x
+    name varchar(10) NOT NULL,
+    birthyear int(10) not null,
+    addr char(2) NOT NULL,
+    mobile1 char(3),
+    mobile2 char(8),
+    height smallint,
+    mdate date
+);
+show tables;
+
+
+drop table if exists buytbl;
+create table buytbl(
+num int auto_increment not null primary key,  -> auto_increment: 데이터를 삽입하면 자동으로 순번이 지정
+userid char(8) not null,
+prodname char(6) not null,
+groupname char(4),
+price int not null,
+amount smallint,
+foreign key (userid) references usertbl(userid) 
+);
+show tables;
+
+describe usertbl;
+insert into usertbl values('LSG', '이승기', 1987, '서울', '011', '1111111', 182, '2008-8-8' );
+select * from usertbl;
+
+insert into usertbl values('KBS', '김범수', 1979, '경남', '011', '2222222', 173, '2012-4-4' );
+insert into buytbl values(null, 'KBS', '운동화', null, 30, 2);
+
+select * from buytbl;
+delete from buytbl where userid='KBS';  -->특정 데이터 삭제
+truncate table buytbl;  --> 전체 데이터 삭제
+
+
+

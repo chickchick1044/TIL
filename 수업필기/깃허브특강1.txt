@@ -1,0 +1,24 @@
+무료 인터넷 강의 사이트
+
+Coursera - 
+
+edx - 1.introduction to computerscience and programming using python 
+2.데이터사이언스 기초
+
+cs50 : 컴퓨터기초 Introduction to Computer Science-Harvard
+
+
+udacity(유료 포함): 안드로이드, 자율주행, 머신러닝, 알고리즘
+
+유튜브 (Siraj Raval)
+(3 brown 1 blue )- 선형대수(한글자막), 비트코인이 뭐하는건지
+
+칸아카데미 : 수학, 암호학
+
+파이썬 코딩도장
+
+모두를 위한 머신러닝/딥러닝강의
+
+인프런
+
+알고리즘 문제는 프로그래머스, hackerRank:주제분류가 잘되어있음

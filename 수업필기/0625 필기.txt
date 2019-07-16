@@ -1,0 +1,32 @@
+﻿<6월25일>
+R서버 설치후 R 스튜디오상의 경로가 
+[Default] [64-bit] C:\Program Files\R\R-3.6.0
+[Default] [64-bit] C:\Program Files\Microsoft\R Client\R_SERVER
+로 바꼈다.
+
+> R의 기본 사용법
+스크립트 : 컴파일x
+주석은 #
+세미콜론을 사용
+대소문자 구별
+-몫 : %/%
+-나머지: %%
+
+> teacher에 접근하지 못할 때 해결
+윈+r > mmc(콘솔1) > 파일> 스탭인추가> 로컬 컴퓨터 정책 > 확인
+관리템플릿> 네트워크 > Lan man 워크스테이션 > 보안되지않은 게스트 로그온 사용
+
+> 명령어
+ls() #변수에 대한 리스트를 리턴
+rm(list=ls()) #리스트에 있는걸 전부 지움
+
+<Azure Pass 등록>
+https://www.microsoftazurepass.com/
+
+id: admin2019
+pwd: Pa$$w0rd2019
+
+서버관리자: admin0139
+데이터베이스명: AirlineData
+서버명: testmldb0139
+

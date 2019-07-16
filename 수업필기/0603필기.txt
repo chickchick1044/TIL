@@ -1,0 +1,24 @@
+﻿<복습>
+앙상블
+예측모형(데이터를 뽑는 방법)
+*bagging:랜덤 - random forest
+*boosting:순차적 - gradient boosting:잔차량 줄임,데이터 쏠림 완화
+
+평가모형
+cross validation: train test데이터를 n개로 나누어 n번시행
+k-fold
+LOOCV: 하나의 데이터를 남기고
+Shuffle Split
+Group K-Fold
+
+bagging: 서로 다른 데이터를 동일한 여러개의 모델로 학습
+random forest: 다른 모델로 학습
+
+soft - 
+hard - 아웃풋이 클래스로 나온것을 다수결로 
+
+
+<수업>
+average_precision_score: 면적을 계산
+
+

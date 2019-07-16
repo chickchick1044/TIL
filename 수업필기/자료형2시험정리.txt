@@ -1,0 +1,55 @@
+<String>
+Text1 = " python programming"
+1. print(Text1[11])
+2. print(Text1[8:11])
+3. 'gram' in Text1
+4. Text1.upper()
+5. Text1.count('p')
+6. Text1.split()
+7. print( '-'.join(Text1.split()))
+8.Text1.strip()
+9. Text1.replace('python', 'hello')
+
+<List>
+solarsys = ['태양', '수성', '금성', '지구', '화성', '목성', '지구']
+solarsys1 = ['토성', '천왕성', '해왕성']
+planet = '지구'
+1. print(solarsys[1:4])
+2. print(solarsys.index(planet))
+3. solarsys[4] = '해왕성'
+4. solarsys.insert(1,'명왕성')
+5. solarsys.append('토성')
+6. solarsys.pop()
+7. solarsys.remove('금성')
+8. del solarsys[1:3]
+9. solarsys.pop(2)
+10. solarsys.extend(solarsys1)
+11. solarsys.sort()
+12. solarsys.sort(reverse=True)
+13. solarsys.sort(reverse=True)
+14. '만리장성' in solarsys
+15. print(solarsys*3)
+16. len(solarsys)
+17. solarsys.count(planet)
+18. solarsys.clear()
+19. del solarsys
+
+<Dictionary>
+1. mydict={}
+2. mydict = {'red':1, 'blue':3, 'green':4}
+3. mydict['green']=7
+4. print(mydict)
+5. 'blue' in mydict
+6. len(mydict)
+7. mydict2 = mydict.copy()
+8. mydict.get('red')
+9. mydict.keys()
+10. mydict.values()
+11. mydict.popitem()
+12. mydict.setdefault('black', 5)
+13. sorted(mydict)
+14. sorted(mydict.items(), key=lambda x: x[1])
+15. del mydict['blue']
+16. mydict.pop('blue')
+17. mydict.clear()
+18. del mydict
